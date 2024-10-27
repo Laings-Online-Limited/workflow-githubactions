@@ -1,0 +1,15 @@
+name: Example of deployment pipeline
+on: 
+  push:
+    branches:
+      - main
+  workflow_run:
+
+jobs:
+  first_job:
+    name: My first job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet the user
+      - run: | 
+          echo "Hello world  from ${{ github.actor }}."
